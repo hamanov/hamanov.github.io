@@ -1,0 +1,126 @@
+:root {
+    --bg: #fff;
+    --text: #222;
+    --muted: #666;
+    --link: #555;
+    --rule: #d5d5d5;
+    --sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --serif: Charter, 'Iowan Old Style', Georgia, serif;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #161616;
+        --text: #e4e4e4;
+        --muted: #9a9a9a;
+        --link: #b5b5b5;
+        --rule: #333;
+    }
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    background: var(--bg);
+}
+
+body {
+    margin: 0 auto;
+    padding: 3rem 1.25rem;
+    max-width: 42rem;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--serif);
+}
+
+/* Navigation and footer */
+nav ul, footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: var(--sans);
+    font-weight: bold;
+}
+
+nav ul li, footer ul li {
+    display: inline;
+    margin-right: 1.25rem;
+}
+
+nav a[aria-current="page"] {
+    color: var(--text);
+}
+
+/* Links */
+a {
+    color: var(--link);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+}
+
+/* Content */
+main {
+    margin: 3rem 0;
+}
+
+h1 {
+    margin: 0 0 1.5rem;
+    font-family: var(--sans);
+    font-size: 2.5rem;
+    line-height: 1.15;
+}
+
+p {
+    margin: 0 0 1.25rem;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--text);
+}
+
+p a {
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+}
+
+footer {
+    padding-top: 1rem;
+    border-top: 1px solid var(--rule);
+    font-size: 0.9rem;
+}
+
+/* Lists of notes and papers */
+ul.posts {
+    margin: 1.25rem 0 2.5rem;
+    padding: 0;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+ul.posts li {
+    list-style: none;
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding-top: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p, ul.posts {
+        font-size: 1.1rem;
+    }
+}
