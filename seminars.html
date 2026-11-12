@@ -6,13 +6,27 @@
 
         <style>
             .box {
-                max-width: 400px;
+                width: 100%;
+                box-sizing: border-box;
                 height: auto;
                 background-color: #f4f4f4;
                 border: 2px solid black;
                 padding: 15px;
-                margin: 10px;
+                margin: 10px 0;
                 border-radius: 5px;
+            }
+            .box h3 {
+                color: black;
+                margin: 0 0 5px 0;
+            }
+            .box .seminar-date {
+                color: lightgray;
+                font-size: 0.85em;
+                margin: 0;
+            }
+            .box .seminar-desc {
+                font-size: 0.95em;
+                margin: 5px 0;
             }
         </style>
     </head>
@@ -33,20 +47,23 @@
                 <p>If anything here is of interest, and you would like to contact me about it, please do.</p>
             </div><!-- /.blurb -->
         </div><!-- /.container -->
+        
         <div>
             <h1>Winter Semester 2026/27</h1>
-            <div class ="box">
-                <p>Gabber rigidity. (title undecided)</p>
-                <p><small>27 January 2027, Algebraic K-Theory Seminar</small></p>
+            <div class="box">
+                <p class="seminar-desc">Gabber rigidity. (title undecided)</p>
+                <p class="seminar-date">27 January 2027, Algebraic K-Theory Seminar</p>
             </div>
         </div>
+        
         <div>
             <h1>Summer Semester 2026</h1>
             <div class="box">
-                <p>Grothendieck topology, sheaves over sites, and Grothendieck topoi.</p>
-                <p><small>Topos Theory Seminar</small></p>
+                <p class="seminar-desc">Grothendieck topology, sheaves over sites, and Grothendieck topoi.</p>
+                <p class="seminar-date">Topos Theory Seminar</p>
             </div>
         </div>
+        
         <footer>
             <ul>
                 <li><a href="mailto:hamanov@uni-muenster.de">My Email</a></li>
